@@ -16,7 +16,7 @@ import * as React from "react"
 
 // export const navItems: Record<string, NavItem[]>
 
-export function NavigationMenuDemo() {
+export function NavBar() {
   return (
     <NavigationMenu>
       <NavigationMenuList>
