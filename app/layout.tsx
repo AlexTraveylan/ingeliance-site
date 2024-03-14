@@ -1,5 +1,6 @@
 import { Footer } from "@/components/footer"
 import { Header } from "@/components/header"
+import { SocialBar } from "@/components/socialBar"
 import { cn } from "@/lib/utils"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
@@ -24,6 +25,7 @@ export default function RootLayout({
         <Header />
         <div className="flex flex-grow">{children}</div>
         <Footer />
+        <SocialBar />
       </body>
     </html>
   )

@@ -14,8 +14,6 @@ import { cn } from "@/lib/utils"
 import Link from "next/link"
 import * as React from "react"
 
-// export const navItems: Record<string, NavItem[]>
-
 export function NavBar() {
   return (
     <NavigationMenu>
@@ -55,25 +53,27 @@ export function NavBar() {
   )
 }
 
-const ListItem = React.forwardRef<React.ElementRef<"a">, React.ComponentPropsWithoutRef<"a"> & { href: string }>(
-  ({ className, title, children, href, ...props }) => {
-    return (
-      <li>
-        <NavigationMenuLink asChild>
-          <Link
-            href={href}
-            className={cn(
-              "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-              className
-            )}
-            {...props}
-          >
-            <div className="text-sm font-medium leading-none">{title}</div>
-            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">{children}</p>
-          </Link>
-        </NavigationMenuLink>
-      </li>
-    )
-  }
-)
+const ListItem = React.forwardRef<React.ElementRef<"a">, React.ComponentPropsWithoutRef<"a"> & { href: string }>((props, ref) => {
+  const { className, title, children, href, ...delegated } = props
+
+  return (
+    <li>
+      <Link href={href} passHref legacyBehavior>
+        <a
+          className={cn(
+            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+            className
+          )}
+          {...delegated}
+        >
+          <div className="text-sm font-medium leading-none">{title}</div>
+          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">{children}</p>
+        </a>
+      </Link>
+    </li>
+  )
+})
+
 ListItem.displayName = "ListItem"
+
+export default ListItem
