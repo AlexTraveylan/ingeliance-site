@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Ingeliance Site
 
-## Getting Started
+This is a Next.js project built with TypeScript and styled with Tailwind CSS.
 
-First, run the development server:
+## Project Structure
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- `app/`: Contains the main pages of the application, organized by sections such as `groupe`, `secteur`, `metiers`, `carriere`, `actualites`, and `contact`.
+- `components/`: Contains reusable components like `header.tsx` and `navbar.tsx`.
+- `lib/`: Contains utility functions and data such as `navBarContent.ts` and `utils.ts`.
+- `public/`: Contains public assets for the application.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Available Scripts
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+In the project directory, you can run:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- `npm run dev`: Runs the app in the development mode.
+- `npm run build`: Builds the app for production.
+- `npm run start`: Runs the built app in production mode.
 
-## Learn More
+## Dependencies
 
-To learn more about Next.js, take a look at the following resources:
+This project uses several dependencies, including:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `next`: For building the Next.js application.
+- `react` and `react-dom`: For building the UI of the application.
+- `tailwindcss`, `tailwind-merge`, and `tailwindcss-animate`: For styling the application.
+- `clsx` and `lucide-react`: For handling classnames and icons, respectively.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Dev Dependencies
 
-## Deploy on Vercel
+The project uses several development dependencies, including:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `typescript`: For adding static types to JavaScript.
+- `eslint` and `eslint-config-next`: For linting the project.
+- `autoprefixer` and `postcss`: For processing CSS.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
