@@ -9,7 +9,7 @@ import "./globals.css"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Ingeliance Technologies",
+  title: "Ingeliance",
   description:
     "Ingeliance propose des solutions d'ingénierie, et de conseil en technologies innovantes pour les secteurs de l'aéronautique, du spatial, de la défense, de l'énergie, du transport et de l'industrie.",
 }
