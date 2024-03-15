@@ -2,7 +2,6 @@ import { FullWidthArea } from "@/components/full-width-area"
 import { NotreOffre, notreOffre } from "@/components/notre-offre"
 import { SecteurActivite } from "@/components/secteur-activite"
 import { Skeleton } from "@/components/ui/skeleton"
-import { navItems } from "@/lib/navBarContent"
 import { Suspense } from "react"
 
 export default function Home() {
@@ -20,13 +19,6 @@ export default function Home() {
       </Suspense>
       <Suspense fallback={<Skeleton className="h-[536px] w-screen" />}>
         <SecteurActivite />
-      </Suspense>
-      <Suspense fallback={<Skeleton className="h-[536px] w-screen" />}>
-        <FullWidthArea
-          imageUrlIndex={1}
-          title="Rejoignez une aventure humaine & collective !"
-          action={{ label: "Nous rejoindre", href: navItems["carriere"][3].href, ariaLabel: navItems["carriere"][3].ariaLabel }}
-        />
       </Suspense>
     </div>
   )
