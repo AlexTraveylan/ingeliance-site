@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button"
+import { motsClefs } from "@/lib/mots-clefs"
 import Link from "next/link"
 
 export type ActionButtonProps = {
@@ -23,6 +24,7 @@ export const FullWidthArea = ({ imageUrlIndex, title, description, action }: Ful
           <div className="min-w-[250px] max-w-[720px] flex gap-5 flex-col px-10">
             <h2 className="text-slate-200 font-bold text-4xl">{title.toUpperCase()}</h2>
             {description && <p className="text-slate-200 font-semibold">{description}</p>}
+            <p className="text-slate-200">{`Mots clefs : ${motsClefs.join(", ")}.`}</p>
             {action && (
               <Link href={action.href} className="flex items-center justify-center">
                 <Button>{action.label}</Button>

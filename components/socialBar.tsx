@@ -1,7 +1,7 @@
-import { Copyright, Facebook, Linkedin } from "lucide-react"
+import { Copyright, Linkedin, Twitter } from "lucide-react"
 
 const socialEternLink = {
-  facebook: "https://fr-fr.facebook.com/ingeliance/",
+  twitter: "https://twitter.com/ingeliance/",
   linkedin: "https://fr.linkedin.com/company/ingeliance",
 }
 
@@ -16,8 +16,8 @@ export const SocialBar = () => {
         </p>
       </div>
       <div className="flex gap-3">
-        <a href={socialEternLink.facebook} target="_blank">
-          <Facebook className="text-slate-500" />
+        <a href={socialEternLink.twitter} target="_blank">
+          <Twitter className="text-slate-500" />
         </a>
         <a href={socialEternLink.linkedin} target="_blank">
           <Linkedin className="text-slate-500" />

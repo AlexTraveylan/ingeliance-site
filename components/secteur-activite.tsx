@@ -14,7 +14,7 @@ export function SecteurActivite() {
       <Carousel
         className="w-full max-w-sm md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl"
         opts={{
-          align: "center",
+          dragFree: true,
           loop: true,
         }}
         plugins={[
