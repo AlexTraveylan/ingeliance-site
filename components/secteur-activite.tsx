@@ -30,7 +30,7 @@ export function SecteurActivite() {
               <div className="p-1">
                 <Card className="aspect-square items-center justify-center flex flex-col">
                   <CardContent className="flex items-center justify-center mt-2">
-                    {secteurItem?.img_url && <Image src={secteurItem.img_url} alt={secteurItem.title} width={500} height={350} />}
+                    {secteurItem?.img_url && <Image src={secteurItem.img_url} alt={secteurItem.title} width={500} height={330} />}
                   </CardContent>
                   <CardFooter className="flex flex-col gap-3">
                     <h2>{secteurItem.title}</h2>

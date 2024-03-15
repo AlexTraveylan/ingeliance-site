@@ -24,7 +24,7 @@ export default function Home() {
       <Suspense fallback={<Skeleton className="h-[536px] w-screen" />}>
         <FullWidthArea
           imageUrlIndex={1}
-          title="Rejoingnez une aventure humaine & collective !"
+          title="Rejoignez une aventure humaine & collective !"
           action={{ label: "Nous rejoindre", href: navItems["carriere"][3].href, ariaLabel: navItems["carriere"][3].ariaLabel }}
         />
       </Suspense>

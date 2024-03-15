@@ -11,12 +11,20 @@ export function NavBarMobile() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button>
+        <Button aria-label="Bouton pour ouvrir la barre de navigation" id="navBarBouton" variant={"outline"}>
           <Menu />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-72 p-3 mx">
         <Accordion type="single" collapsible className="w-full">
+          <AccordionItem value="accueil">
+            <AccordionTrigger>{"accueil".toUpperCase()}</AccordionTrigger>
+            <AccordionContent>
+              <Link href="/" aria-label="retour à l'accueil">
+                <h2>{"Retour accueil"}</h2>
+              </Link>
+            </AccordionContent>
+          </AccordionItem>
           {Object.keys(navItems).map((groupItem) => {
             return (
               <AccordionItem key={`nav_mobile_${groupItem}`} value={groupItem}>

@@ -22,10 +22,10 @@ export const FullWidthArea = ({ imageUrlIndex, title, description, action }: Ful
     return (
       <div className="bg-right bg-cover bg-[url('/accueil1.webp')] h-[536px] w-screen">
         <div className=" bg-sky-900/30 gap-5 flex items-start flex-col justify-center w-full h-full">
-          <div className="min-w-[250px] max-w-[720px] flex gap-5 flex-col px-10">
-            <h1 className="text-slate-200 font-bold text-4xl">{title.toUpperCase()}</h1>
-            {description && <p className="text-slate-200 font-semibold">{description}</p>}
-            <p className="text-slate-200">
+          <div className="min-w-[250px] max-w-[720px] flex gap-5 flex-col p-10 bg-slate-800/80">
+            <h1 className="text-slate-100 font-bold text-4xl">{title.toUpperCase()}</h1>
+            {description && <p className="text-slate-100 font-semibold">{description}</p>}
+            <p className="text-slate-100">
               <span className="font-semibold">{"Mots clefs : "}</span>
               {`${motsClefs.join(", ")}.`}
             </p>
@@ -44,9 +44,9 @@ export const FullWidthArea = ({ imageUrlIndex, title, description, action }: Ful
     return (
       <div className="bg-right bg-cover bg-[url('/accueil2.webp')] h-[536px] w-screen">
         <div className=" bg-sky-900/30 gap-5 flex items-center flex-col justify-center w-full h-full">
-          <div className="min-w-[250px] max-w-[720px] flex gap-5 flex-col px-10">
-            <h2 className="text-slate-200 font-bold text-4xl text-center">{title.toUpperCase()}</h2>
-            {description && <p className="text-slate-200 font-semibold">{description}</p>}
+          <div className="min-w-[250px] max-w-[720px] flex gap-5 flex-col p-10 bg-slate-800/80">
+            <h2 className="text-slate-100 font-bold text-4xl text-center">{title.toUpperCase()}</h2>
+            {description && <p className="text-slate-100 font-semibold">{description}</p>}
             {action && (
               <Link href={action.href} aria-label={action.ariaLabel} className="flex items-center justify-center">
                 <Button>{action.label}</Button>

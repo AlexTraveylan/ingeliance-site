@@ -8,7 +8,7 @@ export const Footer = () => {
       <div className="flex items-center justify-center">
         <Image src="/footerLogo.webp" alt="Ingeliance" width={200} height={200} />
       </div>
-      <div className="flex flex-col justify-center items-center text-slate-100">
+      <div className="flex flex-col justify-center items-center text-slate-50">
         <ul>
           {Object.keys(navItems).map((groupItem) => {
             return (
@@ -30,7 +30,7 @@ export const Footer = () => {
           })}
         </ul>
       </div>
-      <div className="flex items-center justify-center text-slate-100">
+      <div className="flex items-center justify-center text-slate-50">
         <Link href="/mentions-legales" aria-label="Lire les mentions légales">
           Mentions légales
         </Link>
@@ -39,7 +39,7 @@ export const Footer = () => {
         <div className="flex items-center justify-center">
           <Image src="/drapeauFr.webp" alt="Français" width={18} height={18} />
         </div>
-        <h2 className="text-slate-100">{"Français".toUpperCase()}</h2>
+        <h2 className="text-slate-50">{"Français".toUpperCase()}</h2>
       </div>
     </footer>
   )
