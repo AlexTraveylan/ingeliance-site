@@ -10,17 +10,17 @@ export const SocialBar = () => {
   return (
     <div className="bg-slate-950 flex py-5 justify-evenly">
       <div className="flex gap-1">
-        <Copyright className="text-slate-500" />
-        <p className="text-slate-500">
+        <Copyright className="text-slate-300" />
+        <p className="text-slate-300">
           {"ingeliance".toLocaleUpperCase()} {actualYear}
         </p>
       </div>
       <div className="flex gap-3">
         <a href={socialEternLink.twitter} target="_blank" aria-label="Lien vers le twitter d'ingeliance">
-          <Twitter className="text-slate-500" />
+          <Twitter className="text-slate-300" />
         </a>
         <a href={socialEternLink.linkedin} target="_blank" aria-label="Lien vers le linkedin d'ingeliance">
-          <Linkedin className="text-slate-500" />
+          <Linkedin className="text-slate-300" />
         </a>
       </div>
     </div>
