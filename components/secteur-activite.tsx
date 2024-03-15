@@ -34,7 +34,7 @@ export function SecteurActivite() {
                   </CardContent>
                   <CardFooter className="flex flex-col gap-3">
                     <h2>{secteurItem.title}</h2>
-                    <Link href={secteurItem.href}>
+                    <Link href={secteurItem.href} aria-label={secteurItem.ariaLabel}>
                       <Button>En savoir +</Button>
                     </Link>
                   </CardFooter>

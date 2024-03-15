@@ -23,7 +23,7 @@ export function NavBarMobile() {
                     {navItems[groupItem].map((item) => {
                       return (
                         <li key={`nav_mobile_${item.title}`}>
-                          <Link href={item.href}>
+                          <Link href={item.href} aria-label={item.ariaLabel}>
                             <h2>{item.title}</h2>
                             <h2 className="font-light">{item.description}</h2>
                           </Link>
@@ -40,7 +40,7 @@ export function NavBarMobile() {
               <AccordionItem key={`nav_mobile_${item.title}`} value={item.title}>
                 <AccordionTrigger>{item.title.toUpperCase()}</AccordionTrigger>
                 <AccordionContent>
-                  <Link href={item.href}>
+                  <Link href={item.href} aria-label={item.ariaLabel}>
                     <h2>{item.title.toUpperCase()}</h2>
                     <h2 className="font-light">{item.description}</h2>
                   </Link>

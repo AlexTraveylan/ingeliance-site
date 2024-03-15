@@ -16,10 +16,10 @@ export const SocialBar = () => {
         </p>
       </div>
       <div className="flex gap-3">
-        <a href={socialEternLink.twitter} target="_blank">
+        <a href={socialEternLink.twitter} target="_blank" aria-label="Lien vers le twitter d'ingeliance">
           <Twitter className="text-slate-500" />
         </a>
-        <a href={socialEternLink.linkedin} target="_blank">
+        <a href={socialEternLink.linkedin} target="_blank" aria-label="Lien vers le linkedin d'ingeliance">
           <Linkedin className="text-slate-500" />
         </a>
       </div>

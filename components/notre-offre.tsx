@@ -21,12 +21,12 @@ export const notreOffre: OffreProps = {
       title: "Technologies",
       description:
         "Le pôle Technologies vous propose un accompagnement de notre bureau d’études et des expertises technologiques sur des problématiques industrielles variées.",
-      imageUrl: "/pictoTechnologie.png",
+      imageUrl: "/pictoTechnologie.webp",
     },
     {
       title: "Solutions",
       description: "Le pôle Solutions vous propose des prestations d’études et de réalisations industrielles clé en main pour tous vos projets.",
-      imageUrl: "/pictoSolution.png",
+      imageUrl: "/pictoSolution.webp",
     },
   ],
 }

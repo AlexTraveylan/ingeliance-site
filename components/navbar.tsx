@@ -19,7 +19,7 @@ export function NavBar() {
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
-          <Link href="/" legacyBehavior passHref>
+          <Link href="/" legacyBehavior passHref aria-label="retour accueil">
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>{"Accueil".toUpperCase()}</NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
@@ -30,7 +30,7 @@ export function NavBar() {
               <NavigationMenuContent>
                 <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
                   {navItems[navItem].map((item) => (
-                    <ListItem key={item.title} title={item.title} href={item.href}>
+                    <ListItem key={item.title} title={item.title} href={item.href} ariaLabel={item.ariaLabel}>
                       {item.description}
                     </ListItem>
                   ))}
@@ -42,7 +42,7 @@ export function NavBar() {
         {navItemsSolo.map((item) => {
           return (
             <NavigationMenuItem key={item.title}>
-              <Link href={item.href} legacyBehavior passHref>
+              <Link href={item.href} legacyBehavior passHref aria-label={item.ariaLabel}>
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>{item.title.toUpperCase()}</NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
@@ -53,26 +53,28 @@ export function NavBar() {
   )
 }
 
-const ListItem = React.forwardRef<React.ElementRef<"a">, React.ComponentPropsWithoutRef<"a"> & { href: string }>((props, ref) => {
-  const { className, title, children, href, ...delegated } = props
+const ListItem = React.forwardRef<React.ElementRef<"a">, React.ComponentPropsWithoutRef<"a"> & { href: string; ariaLabel: string }>(
+  (props, ref) => {
+    const { className, title, children, href, ariaLabel, ...delegated } = props
 
-  return (
-    <li>
-      <Link href={href} passHref legacyBehavior>
-        <a
-          className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-            className
-          )}
-          {...delegated}
-        >
-          <div className="text-sm font-medium leading-none">{title}</div>
-          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">{children}</p>
-        </a>
-      </Link>
-    </li>
-  )
-})
+    return (
+      <li>
+        <Link href={href} passHref legacyBehavior aria-label={ariaLabel}>
+          <a
+            className={cn(
+              "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+              className
+            )}
+            {...delegated}
+          >
+            <div className="text-sm font-medium leading-none">{title}</div>
+            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">{children}</p>
+          </a>
+        </Link>
+      </li>
+    )
+  }
+)
 
 ListItem.displayName = "ListItem"
 

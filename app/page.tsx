@@ -16,7 +16,7 @@ export default function Home() {
       <FullWidthArea
         imageUrlIndex={1}
         title="Rejoingnez une aventure humaine & collective !"
-        action={{ label: "Nous rejoindre", href: navItems["carriere"][3].href }}
+        action={{ label: "Nous rejoindre", href: navItems["carriere"][3].href, ariaLabel: navItems["carriere"][3].ariaLabel }}
       />
     </div>
   )
