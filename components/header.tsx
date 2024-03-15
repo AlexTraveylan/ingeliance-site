@@ -2,9 +2,10 @@
 
 import { NavBar } from "@/components/navbar"
 import { NavBarMobile } from "@/components/navbarMobile"
+import { Skeleton } from "@/components/ui/skeleton"
 import Image from "next/image"
 import Link from "next/link"
-import { useEffect, useState } from "react"
+import { Suspense, useEffect, useState } from "react"
 
 export const Header = () => {
   const [isWidthGreaterThan1080, setIsWidthGreaterThan1080] = useState(false)
@@ -23,7 +24,7 @@ export const Header = () => {
       </Link>
 
       <div className="flex gap-5 items-center justify-center">
-        {isWidthGreaterThan1080 ? <NavBar /> : <NavBarMobile />}
+        <Suspense fallback={<Skeleton className="h-10 w-40" />}>{isWidthGreaterThan1080 ? <NavBar /> : <NavBarMobile />}</Suspense>
         <div className="flex items-center justify-center">
           <Image src="/drapeauFr.webp" alt="Français" width={18} height={18} />
         </div>

@@ -20,7 +20,7 @@ const imagesAccueilPossibles = ["/accueil1.webp", "/accueil2.webp"]
 export const FullWidthArea = ({ imageUrlIndex, title, description, action }: FullWidthAreaProps) => {
   if (imageUrlIndex === 0) {
     return (
-      <div className="bg-right bg-cover bg-[url('/accueil1.webp')] h-[536px] w-screen">
+      <div className="bg-right bg-cover bg-[url('/accueil1.webp')] h-[480px] w-screen">
         <div className=" bg-sky-900/30 gap-5 flex items-start flex-col justify-center w-full h-full">
           <div className="min-w-[250px] max-w-[720px] flex gap-5 flex-col p-10 bg-slate-800/80">
             <h1 className="text-slate-100 font-bold text-4xl">{title.toUpperCase()}</h1>
@@ -42,7 +42,7 @@ export const FullWidthArea = ({ imageUrlIndex, title, description, action }: Ful
 
   if (imageUrlIndex === 1) {
     return (
-      <div className="bg-right bg-cover bg-[url('/accueil2.webp')] h-[536px] w-screen">
+      <div className="bg-right bg-cover bg-[url('/accueil2.webp')] h-[400px] w-screen">
         <div className=" bg-sky-900/30 gap-5 flex items-center flex-col justify-center w-full h-full">
           <div className="min-w-[250px] max-w-[720px] flex gap-5 flex-col p-10 bg-slate-800/80">
             <h2 className="text-slate-100 font-bold text-4xl text-center">{title.toUpperCase()}</h2>
