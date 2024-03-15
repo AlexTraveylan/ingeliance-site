@@ -25,7 +25,7 @@ export default function RootLayout({
     <html lang="fr">
       <body className={cn(inter.className, "flex flex-col min-h-screen")}>
         <Header />
-        <div className="flex flex-grow">{children}</div>
+        {children}
         <Analytics />
         <Footer />
         <SocialBar />

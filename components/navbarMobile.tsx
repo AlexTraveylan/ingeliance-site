@@ -1,6 +1,7 @@
 "use client"
 
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+import { Button } from "@/components/ui/button"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import { navItems, navItemsSolo } from "@/lib/navBarContent"
 import { Menu } from "lucide-react"
@@ -10,7 +11,9 @@ export function NavBarMobile() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Menu />
+        <Button>
+          <Menu />
+        </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-72 p-3 mx">
         <Accordion type="single" collapsible className="w-full">
