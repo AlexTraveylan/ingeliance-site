@@ -1,6 +1,7 @@
 import { FullWidthArea } from "@/components/full-width-area"
 import { NotreOffre, notreOffre } from "@/components/notre-offre"
 import { SecteurActivite } from "@/components/secteur-activite"
+import { navItems } from "@/lib/navBarContent"
 
 export default function Home() {
   return (
@@ -12,6 +13,11 @@ export default function Home() {
       />
       <NotreOffre description={notreOffre.description} title={notreOffre.title} items={notreOffre.items} />
       <SecteurActivite />
+      <FullWidthArea
+        imageUrlIndex={1}
+        title="Rejoingnez une aventure humaine & collective !"
+        action={{ label: "Nous rejoindre", href: navItems["carriere"][3].href }}
+      />
     </div>
   )
 }
