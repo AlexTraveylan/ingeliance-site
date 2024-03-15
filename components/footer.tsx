@@ -10,6 +10,11 @@ export const Footer = () => {
       </div>
       <div className="flex flex-col justify-center items-center text-slate-50">
         <ul>
+          <li>
+            <Link href="/" aria-label="retour accueil">
+              {"Accueil".toUpperCase()}
+            </Link>
+          </li>
           {Object.keys(navItems).map((groupItem) => {
             return (
               <li key={`footer_${groupItem}`}>
