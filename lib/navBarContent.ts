@@ -2,6 +2,7 @@ export type NavItem = {
   title: string
   href: string
   description: string
+  img_url?: string
 }
 
 export const navItems: Record<string, NavItem[]> = {
@@ -37,31 +38,37 @@ export const navItems: Record<string, NavItem[]> = {
       title: "Aéronautique & Spatial",
       href: "/secteur/aeronautiqueSpatial",
       description: "Description for aeronautiqueSpatial",
+      img_url: "/secteur/aero.jpg",
     },
     {
       title: "Défense",
       href: "/secteur/defense",
       description: "Description for defense",
+      img_url: "/secteur/defense.jpg",
     },
     {
       title: "Naval",
       href: "/secteur/naval",
       description: "Description for naval",
+      img_url: "/secteur/naval.jpg",
     },
     {
       title: "Energie",
       href: "/secteur/energie",
       description: "Description for energie",
+      img_url: "/secteur/energie.jpg",
     },
     {
       title: "Transport & Biens d'équipement",
       href: "/secteur/transportBiensEquipement",
       description: "Description for transportBiensEquipement",
+      img_url: "/secteur/transport.jpg",
     },
     {
       title: "Industrie des procédés",
       href: "/secteur/industrieDesProcedes",
       description: "Description for industrieDesProcedes",
+      img_url: "/secteur/industrie.jpg",
     },
   ],
   metiers: [

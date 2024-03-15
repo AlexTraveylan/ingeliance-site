@@ -1,0 +1,36 @@
+import { Card, CardContent, CardFooter } from "@/components/ui/card"
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
+import { navItems } from "@/lib/navBarContent"
+import Image from "next/image"
+import Link from "next/link"
+import { Button } from "./ui/button"
+
+export function SecteurActivite() {
+  return (
+    <div className="flex justify-center w-full py-5 bg-slate-200">
+      <Carousel className="w-full max-w-screen-xl">
+        <CarouselContent className="max-w-7xl">
+          {navItems["secteur"].map((secteurItem, index) => (
+            <CarouselItem key={`carousel_secteur_${index}`} className="pl-1 md:basis-1/2 lg:basis-1/3">
+              <div className="p-1">
+                <Card className="aspect-square items-center justify-center flex flex-col">
+                  <CardContent className="flex items-center justify-center py-3">
+                    {secteurItem?.img_url && <Image src={secteurItem.img_url} alt={secteurItem.title} width={500} height={350} />}
+                  </CardContent>
+                  <CardFooter className="flex flex-col gap-3">
+                    <h2>{secteurItem.title}</h2>
+                    <Link href={secteurItem.href}>
+                      <Button>En savoir +</Button>
+                    </Link>
+                  </CardFooter>
+                </Card>
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselPrevious />
+        <CarouselNext />
+      </Carousel>
+    </div>
+  )
+}

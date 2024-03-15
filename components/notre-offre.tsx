@@ -34,14 +34,14 @@ export const notreOffre: OffreProps = {
 export const NotreOffre = ({ title, description, items }: OffreProps) => {
   return (
     <div className="flex flex-col items-center px-5 py-10 gap-5">
-      <h2 className=" font-bold text-4xl">{title.toUpperCase()}</h2>
+      <h2 className=" font-bold text-4xl text-center">{title.toUpperCase()}</h2>
       <p className=" font-semibold text-center max-w-[700px]">{description}</p>
-      <div className="flex gap-5">
+      <div className="flex justify-evenly flex-wrap w-full gap-5 p-5">
         {items.map((item) => (
-          <div key={item.title} className="flex flex-col items-center justify-center gap-5">
+          <div key={item.title} className="flex flex-col items-center gap-5">
             <Image src={item.imageUrl} alt={item.title} width={120} height={120} />
             <h3 className="font-bold text-2xl">{item.title.toUpperCase()}</h3>
-            <p className="font-semibold">{item.description}</p>
+            <p className="font-semibold max-w-[340px] text-center">{item.description}</p>
           </div>
         ))}
       </div>
