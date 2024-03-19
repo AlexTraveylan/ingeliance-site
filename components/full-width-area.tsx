@@ -44,16 +44,7 @@ export type FullWidthAreaVariantProps = FullWidthAreaProps & VariantProps<typeof
 export const FullWidthArea = ({ imageCover, title, description, actions, isMotclefs, variant }: FullWidthAreaVariantProps) => {
   return (
     <div className="relative h-[550px] w-screen">
-      <Image
-        src={imageCover.url}
-        alt={imageCover.alt}
-        layout="fill"
-        objectFit="cover"
-        objectPosition="right"
-        quality={75}
-        priority
-        className="z-0"
-      />
+      <Image src={imageCover.url} alt={imageCover.alt} layout="fill" objectFit="cover" quality={75} className="z-0" />
       <div className={cn(fullWidthAreaVariant({ variant }))}>
         <div className="min-w-[250px] max-w-[720px] max-h-[550px] flex gap-5 flex-col p-10 bg-slate-800/80 overflow-auto">
           <h1 className="text-slate-100 font-bold text-4xl">{title.toUpperCase()}</h1>
