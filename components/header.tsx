@@ -19,7 +19,7 @@ export const Header = () => {
   }, [])
 
   return (
-    <header className="flex justify-between mx-5">
+    <header className="flex justify-between mx-5 z-50">
       <Link href="/" aria-label="Retour accueil">
         <Image src="/logo.webp" alt="Ingeliance" width={200} height={200} />{" "}
       </Link>
