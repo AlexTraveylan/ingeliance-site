@@ -12,12 +12,13 @@ export type FullWidthAreaProps = {
   imageUrlIndex: number
   title: string
   description?: string
-  action?: ActionButtonProps
+  actions?: ActionButtonProps[]
+  isMotclefs?: boolean
 }
 
 const imagesAccueilPossibles = ["/accueil1.webp", "/accueil2.webp"]
 
-export const FullWidthArea = ({ imageUrlIndex, title, description, action }: FullWidthAreaProps) => {
+export const FullWidthArea = ({ imageUrlIndex, title, description, actions, isMotclefs }: FullWidthAreaProps) => {
   if (imageUrlIndex === 0) {
     return (
       <div className="bg-right bg-cover bg-[url('/accueil1.webp')] h-[480px] w-screen">
@@ -25,14 +26,28 @@ export const FullWidthArea = ({ imageUrlIndex, title, description, action }: Ful
           <div className="min-w-[250px] max-w-[720px] flex gap-5 flex-col p-10 bg-slate-800/80">
             <h1 className="text-slate-100 font-bold text-4xl">{title.toUpperCase()}</h1>
             {description && <p className="text-slate-100 font-semibold">{description}</p>}
-            <p className="text-slate-100">
-              <span className="font-semibold">{"Mots clefs : "}</span>
-              {`${motsClefs.join(", ")}.`}
-            </p>
-            {action && (
-              <Link href={action.href} aria-label={action.ariaLabel} className="flex items-center justify-center">
-                <Button>{action.label}</Button>
-              </Link>
+            {isMotclefs && (
+              <p className="text-slate-100">
+                <span className="font-semibold">{"Mots clefs : "}</span>
+                {`${motsClefs.join(", ")}.`}
+              </p>
+            )}
+
+            {actions && actions.length > 0 && (
+              <>
+                {actions.map((action) => {
+                  return (
+                    <Link
+                      key={`fullArea${action.label}`}
+                      href={action.href}
+                      aria-label={action.ariaLabel}
+                      className="flex items-center justify-center"
+                    >
+                      <Button>{action.label}</Button>
+                    </Link>
+                  )
+                })}
+              </>
             )}
           </div>
         </div>
@@ -47,10 +62,21 @@ export const FullWidthArea = ({ imageUrlIndex, title, description, action }: Ful
           <div className="min-w-[250px] max-w-[720px] flex gap-5 flex-col p-10 bg-slate-800/80">
             <h2 className="text-slate-100 font-bold text-4xl text-center">{title.toUpperCase()}</h2>
             {description && <p className="text-slate-100 font-semibold">{description}</p>}
-            {action && (
-              <Link href={action.href} aria-label={action.ariaLabel} className="flex items-center justify-center">
-                <Button>{action.label}</Button>
-              </Link>
+            {actions && actions.length > 0 && (
+              <>
+                {actions.map((action) => {
+                  return (
+                    <Link
+                      key={`fullArea${action.label}`}
+                      href={action.href}
+                      aria-label={action.ariaLabel}
+                      className="flex items-center justify-center"
+                    >
+                      <Button>{action.label}</Button>
+                    </Link>
+                  )
+                })}
+              </>
             )}
           </div>
         </div>
