@@ -1,10 +1,10 @@
-import { FullWidthArea } from "@/components/full-width-area"
+import { FullWidthArea, imagesAccueilPossibles } from "@/components/full-width-area"
 import { TitleDescriptionDiv } from "@/components/title-description-div"
 
 export default function Demarcherse() {
   return (
     <div>
-      <FullWidthArea imageUrlIndex={0} title="Notre démarche RSE" />
+      <FullWidthArea imageCover={imagesAccueilPossibles[2]} title="Notre démarche RSE" />
       <TitleDescriptionDiv
         title={"Un groupe engagé"}
         descriptions={[
